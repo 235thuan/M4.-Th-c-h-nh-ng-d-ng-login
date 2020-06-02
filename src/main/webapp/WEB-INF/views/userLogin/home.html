@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:form="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h3>Home</h3>
+
+<form method="post" th:action="login" th:object="${form}" modelAttribute="login">
+    <fieldset>
+        <legend>Login</legend>
+        <table>
+            <tr>
+                <td><label th:field="${login.loginAccount}">Account:</label></td>
+                <td><input th:field="${login.loginAccount}"/></td>
+            </tr>
+            <tr>
+                <td><label th:field="${login.loginPassword}">Password:</label></td>
+                <td><input type="password" th:field="${login.loginPassword}"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Login</button>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</body>
+</html>
